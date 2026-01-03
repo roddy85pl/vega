@@ -2,9 +2,10 @@ import { Button } from '@amazon-devices/kepler-ui-components';
 import LinearGradient from '@amazon-devices/react-linear-gradient';
 import { TVFocusGuideView } from '@amazon-devices/react-native-kepler';
 import { useFocusEffect } from '@amazon-devices/react-navigation__core';
-import React, { useCallback, useMemo } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useCallback, useMemo, useState } from 'react';
+import { StyleSheet, Text, View, Alert } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { AccountLoginWrapperInstance } from '../AccountLoginWrapper';
 import BufferingWindow from '../components/BufferingWindow';
@@ -20,6 +21,8 @@ import {
 import { COLORS } from '../styles/Colors';
 import { scaleUxToDp } from '../utils/pixelUtils';
 import { useDeviceInfo } from '../utils/useDeviceInfo';
+import { STORAGE_KEYS } from '../constants/AppConstants';
+import xtreamApi from '../services/XtreamApiService';
 
 interface ItemProps {
   title: string;
@@ -38,12 +41,41 @@ const SettingsScreen: React.FC<AppDrawerScreenProps<Screens.SETTINGS_SCREEN>> =
     const dispatch = useDispatch();
     const loginStatus = useSelector(settingsSelectors.loginStatus);
     const { deviceInfo, isLoading, fetchDeviceInfo } = useDeviceInfo();
+    const [xtreamInfo, setXtreamInfo] = useState<string>('');
 
     useFocusEffect(
       useCallback(() => {
         fetchDeviceInfo();
+        loadXtreamInfo();
       }, [fetchDeviceInfo]),
     );
+
+    const loadXtreamInfo = async () => {
+      try {
+        const credentials = xtreamApi.getCredentials();
+        if (credentials) {
+          setXtreamInfo(`${credentials.username} @ ${credentials.server}`);
+        }
+      } catch (err) {
+        console.error('Failed to load Xtream info:', err);
+      }
+    };
+
+    const handleLogout = async () => {
+      try {
+        await AsyncStorage.removeItem(STORAGE_KEYS.CREDENTIALS);
+        xtreamApi.logout();
+        // Force app reload by clearing navigation
+        Alert.alert(
+          'Logged Out',
+          'You have been logged out. Please restart the app.',
+          [{ text: 'OK' }]
+        );
+      } catch (err) {
+        console.error('Failed to logout:', err);
+        Alert.alert('Error', 'Failed to logout. Please try again.');
+      }
+    };
 
     const handleOnToggleLoginStatus = useCallback(() => {
       dispatch(setLoginStatus(!loginStatus));
@@ -94,6 +126,27 @@ const SettingsScreen: React.FC<AppDrawerScreenProps<Screens.SETTINGS_SCREEN>> =
           ]}
           style={styles.linearGradient}>
           <Text style={styles.title}>Settings</Text>
+          
+          {/* Xtream Account Info */}
+          {xtreamInfo && (
+            <View style={styles.xtreamSection}>
+              <Text style={styles.sectionTitle}>Xtream Account</Text>
+              <Text style={styles.xtreamInfo}>{xtreamInfo}</Text>
+              <TVFocusGuideView trapFocusRight>
+                <Button
+                  label="Logout"
+                  onPress={handleLogout}
+                  variant="secondary"
+                  mode="outlined"
+                  focusedStyle={styles.buttonFocused}
+                  style={styles.logoutButton}
+                  labelStyle={styles.buttonLabel}
+                  size="sm"
+                />
+              </TVFocusGuideView>
+            </View>
+          )}
+
           <LocaleComponent />
           <ConnectionComponent testID="connection-component" />
           {isAccountLoginEnabled() && (
@@ -146,6 +199,33 @@ const styles = StyleSheet.create({
     fontSize: scaleUxToDp(70),
     marginTop: scaleUxToDp(20),
     marginBottom: scaleUxToDp(30),
+  },
+  xtreamSection: {
+    width: '100%',
+    marginBottom: scaleUxToDp(30),
+    paddingBottom: scaleUxToDp(20),
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.WHITE,
+  },
+  sectionTitle: {
+    color: COLORS.WHITE,
+    fontSize: scaleUxToDp(30),
+    fontWeight: 'bold',
+    marginBottom: scaleUxToDp(10),
+  },
+  xtreamInfo: {
+    color: COLORS.WHITE,
+    fontSize: scaleUxToDp(22),
+    marginBottom: scaleUxToDp(15),
+  },
+  logoutButton: {
+    marginTop: 5,
+    backgroundColor: COLORS.TRANSPARENT,
+    color: COLORS.GRAY,
+    borderColor: COLORS.GRAY,
+    borderWidth: 3,
+    borderRadius: scaleUxToDp(15),
+    paddingHorizontal: scaleUxToDp(20),
   },
   listContainer: {
     flexDirection: 'column',
