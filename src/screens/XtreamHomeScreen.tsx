@@ -15,7 +15,7 @@ import {
   Platform,
   ScrollView,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@amazon-devices/react-navigation__native';
 import { COLORS, DIMENSIONS, TABS, TabType } from '../constants/AppConstants';
 import { MediaItem, Playlist } from '../types/XtreamTypes';
 import { getAllPlaylists, searchContent } from '../services/XtreamDataConverter';
