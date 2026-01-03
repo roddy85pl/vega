@@ -23,7 +23,7 @@ import { CAPTION_DISABLE_ID } from '../../src/constants';
 import PlayerScreen, { styles } from '../../src/screens/PlayerScreen';
 import { TitleData } from '../../src/types/TitleData';
 import { VideoHandler } from '../../src/utils/VideoHandler';
-import { ShakaPlayer } from '../../src/w3cmedia/shakaplayer/ShakaPlayer';
+import { HlsJsPlayer } from '../../src/hlsjsplayer/HlsJsPlayer';
 
 const createMockBuilder = (): IChangeChannelResponseBuilder => {
   let currentStatus: ChangeChannelStatus;
@@ -159,11 +159,11 @@ jest.mock('../../src/utils/VideoHandler', () => {
       removeEventListener: jest.fn(),
     } as unknown as VideoPlayer,
   };
-  const playerRef: React.MutableRefObject<ShakaPlayer | null> = {
+  const playerRef: React.MutableRefObject<HlsJsPlayer | null> = {
     current: {
       load: jest.fn(),
       unload: jest.fn(),
-    } as unknown as ShakaPlayer,
+    } as unknown as HlsJsPlayer,
   };
   return {
     VideoHandler: jest.fn().mockImplementation(() => ({
@@ -247,11 +247,11 @@ const videoRef: React.MutableRefObject<VideoPlayer | null> = {
   } as unknown as VideoPlayer,
 };
 
-const playerRef: React.MutableRefObject<ShakaPlayer | null> = {
+const playerRef: React.MutableRefObject<HlsJsPlayer | null> = {
   current: {
     load: jest.fn(),
     unload: jest.fn(),
-  } as unknown as ShakaPlayer,
+  } as unknown as HlsJsPlayer,
 };
 
 const mockedNavigate = jest.fn();
