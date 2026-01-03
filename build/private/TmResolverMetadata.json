@@ -1,0 +1,889 @@
+{
+  "@amazon-devices/kepler-channel": {
+    "name": "@amazon-devices/kepler-channel",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-channel",
+    "autolink": {
+      "KeplerScriptChannel": {
+        "libraryName": "libkeplerscript-channel-server-lib-1.so",
+        "linkDynamic": true,
+        "components": [],
+        "turbomodules": [
+          "KeplerScriptChannel"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/kepler-content-personalization": {
+    "name": "@amazon-devices/kepler-content-personalization",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-content-personalization",
+    "autolink": {
+      "AmazonContentPersonalizationLib": {
+        "libraryName": "libkeplerscript-content-personalization-lib-1.so",
+        "linkDynamic": true,
+        "provider": "system",
+        "components": [],
+        "turbomodules": [
+          "AmazonNativeContentPersonalization"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/kepler-epg-provider": {
+    "name": "@amazon-devices/kepler-epg-provider",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-epg-provider",
+    "autolink": {
+      "AmazonEpgProviderLib": {
+        "libraryName": "libkeplerscript-epg-provider-lib-1.so",
+        "linkDynamic": true,
+        "provider": "system",
+        "components": [],
+        "turbomodules": [
+          "AmazonNativeChannelProvider",
+          "AmazonNativeProgramProvider",
+          "AmazonNativeLiveEventProvider"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/kepler-epg-sync-scheduler": {
+    "name": "@amazon-devices/kepler-epg-sync-scheduler",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-epg-sync-scheduler",
+    "autolink": {
+      "AmazonEpgSyncTaskSchedulerLib": {
+        "libraryName": "libkeplerscript-epg-sync-scheduler-lib-1.so",
+        "linkDynamic": true,
+        "provider": "system",
+        "components": [],
+        "turbomodules": [
+          "NativeEpgSyncTaskScheduler"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/kepler-file-system": {
+    "name": "@amazon-devices/kepler-file-system",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-file-system",
+    "autolink": {
+      "KeplerFileSystemTM": {
+        "libraryName": "libKeplerFileSystemTM.so.1",
+        "linkDynamic": true,
+        "provider": "custom",
+        "components": [],
+        "turbomodules": [
+          "AmazonKeplerFileSystem"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/kepler-media-account-login": {
+    "name": "@amazon-devices/kepler-media-account-login",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-media-account-login",
+    "autolink": {
+      "KeplerMediaAccountLogin": {
+        "libraryName": "libkeplerscript-kepler-media-account-login-lib-1.so.1",
+        "linkDynamic": true,
+        "provider": "system",
+        "components": [],
+        "turbomodules": [
+          "KeplerMediaAccountLogin"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/kepler-media-content-launcher": {
+    "name": "@amazon-devices/kepler-media-content-launcher",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-media-content-launcher",
+    "autolink": {
+      "KeplerMediaContentLauncher": {
+        "libraryName": "libkeplerscript-kepler-media-content-launcher-lib-1.so",
+        "linkDynamic": true,
+        "components": [],
+        "turbomodules": [
+          "KeplerMediaContentLauncher"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/kepler-media-controls": {
+    "name": "@amazon-devices/kepler-media-controls",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/kepler-media-controls",
+    "autolink": {
+      "KeplerMediaControlsServerTM": {
+        "libraryName": "libkeplerscript-media-controls-1.so",
+        "linkDynamic": true,
+        "components": [],
+        "turbomodules": [
+          "KeplerMediaControlsServerTM"
+        ]
+      },
+      "KeplerMediaControlsClientTM": {
+        "libraryName": "libkeplerscript-media-controls-1.so",
+        "linkDynamic": true,
+        "components": [],
+        "turbomodules": [
+          "KeplerMediaControlsClientTM"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/keplermediadescriptor": {
+    "name": "@amazon-devices/keplermediadescriptor",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/keplermediadescriptor",
+    "autolink": {
+      "keplermediadescriptor": {
+        "libraryName": "libKeplerMediaDescriptor.so",
+        "linkDynamic": true,
+        "components": [],
+        "turbomodules": [
+          "KeplerMediaDescriptorTurboModule"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/keplerscript-appstore-iap-lib": {
+    "name": "@amazon-devices/keplerscript-appstore-iap-lib",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/keplerscript-appstore-iap-lib",
+    "autolink": {
+      "keplerscript-appstore-iap-lib": {
+        "libraryName": "libkeplerscript-appstore-iap-lib.so",
+        "linkDynamic": true,
+        "components": [],
+        "turbomodules": [
+          "AppstoreIAPRequestHandlerModule"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/keplerscript-epg": {
+    "name": "@amazon-devices/keplerscript-epg",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/keplerscript-epg",
+    "autolink": {
+      "kepler-timeline-grid": {
+        "libraryName": "libkepler-timeline-grid-2.so.2",
+        "linkDynamic": true,
+        "components": [
+          "KeplerEPG"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/keplerscript-native-ui-components": {
+    "name": "@amazon-devices/keplerscript-native-ui-components",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/keplerscript-native-ui-components",
+    "autolink": {
+      "AmazonNativeUIComponents": {
+        "libraryName": "libkeplerscript-native-components-2.so.2",
+        "linkDynamic": true,
+        "turbomodules": [],
+        "components": [
+          "KeplerScrollable",
+          "KeplerScrollableItemFrame"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/keplerscript-netmgr-lib": {
+    "name": "@amazon-devices/keplerscript-netmgr-lib",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/keplerscript-netmgr-lib",
+    "autolink": {
+      "AmazonNetMgrLib": {
+        "libraryName": "libkeplerscript-netmgr-lib-2.so",
+        "linkDynamic": true,
+        "components": [],
+        "turbomodules": [
+          "AmazonNetMgrTurboModule",
+          "WifiInterfaceTurboModule"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/lottie-react-native": {
+    "name": "@amazon-devices/lottie-react-native",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/lottie-react-native",
+    "autolink": {
+      "AmazonLottieLib": {
+        "provider": "system"
+      }
+    }
+  },
+  "@amazon-devices/react-linear-gradient": {
+    "name": "@amazon-devices/react-linear-gradient",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-linear-gradient",
+    "autolink": {
+      "AmazonLinearGradientLib": {
+        "provider": "system"
+      }
+    }
+  },
+  "@amazon-devices/react-native-device-info": {
+    "name": "@amazon-devices/react-native-device-info",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-native-device-info",
+    "autolink": {
+      "DeviceInfoLib": {
+        "provider": "system",
+        "libraryName": "libkeplerscript-deviceinfo-lib-10.so.10",
+        "linkDynamic": true,
+        "turbomodules": [
+          "DeviceInfoModule"
+        ]
+      }
+    }
+  },
+  "@amazon-devices/react-native-localize": {
+    "name": "@amazon-devices/react-native-localize",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-native-localize",
+    "autolink": {
+      "LocalizeLib": {
+        "provider": "",
+        "libraryName": "libkeplerscript-localize-lib-3.so.3",
+        "linkDynamic": true,
+        "turbomodules": [
+          "RNLocalize"
+        ]
+      }
+    }
+  },
+  "@amazon-devices/react-native-reanimated": {
+    "name": "@amazon-devices/react-native-reanimated",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-native-reanimated",
+    "autolink": {
+      "RNReanimated": {
+        "provider": "system",
+        "turbomodules": [
+          "RNReanimatedModule"
+        ]
+      }
+    }
+  },
+  "@amazon-devices/react-native-screens": {
+    "name": "@amazon-devices/react-native-screens",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-native-screens",
+    "autolink": {
+      "RNScreensLib": {
+        "provider": "system",
+        "turbomodules": [],
+        "components": [
+          "RNSScreen",
+          "RNSScreenStack",
+          "RNSScreenStackHeaderConfig",
+          "RNSScreenContainer"
+        ]
+      }
+    }
+  },
+  "@amazon-devices/react-native-svg": {
+    "name": "@amazon-devices/react-native-svg",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-native-svg",
+    "autolink": {
+      "RNSVG": {
+        "provider": "system",
+        "turbomodules": [
+          "RNSVGSvgViewModule",
+          "RNSVGRenderableModule"
+        ],
+        "components": [
+          "RNSVGSvgView",
+          "RNSVGGroup",
+          "RNSVGCircle",
+          "RNSVGRect",
+          "RNSVGPath",
+          "RNSVGText",
+          "RNSVGImage",
+          "RNSVGLine",
+          "RNSVGEllipse",
+          "RNSVGTextPath",
+          "RNSVGTSpan",
+          "RNSVGClipPath",
+          "RNSVGLinearGradient",
+          "RNSVGRadialGradient",
+          "RNSVGPattern",
+          "RNSVGMask",
+          "RNSVGUse",
+          "RNSVGSymbol",
+          "RNSVGDefs",
+          "RNSVGMarker",
+          "RNSVGForeignObject"
+        ]
+      }
+    }
+  },
+  "@amazon-devices/react-native-vector-icons": {
+    "name": "@amazon-devices/react-native-vector-icons",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-native-vector-icons",
+    "autolink": {
+      "AmazonVectorIconLib": {
+        "provider": "system",
+        "linkDynamic": true
+      }
+    }
+  },
+  "@amazon-devices/react-native-w3cmedia": {
+    "name": "@amazon-devices/react-native-w3cmedia",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/react-native-w3cmedia",
+    "autolink": {
+      "AmazonW3CMediaFCCLibStable": {
+        "uiComponentName": "/com.amazon.w3cmedia.comp",
+        "linkDynamic": true,
+        "components": [
+          "KeplerShareableSurfaceViewStable",
+          "KeplerCaptionsViewStable",
+          "KeplerVideoSurfaceViewStable"
+        ],
+        "provider": ""
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          }
+        ]
+      }
+    }
+  },
+  "@amazon-devices/security-manager-lib": {
+    "name": "@amazon-devices/security-manager-lib",
+    "path": "/home/matuesz/Desktop/vega/polfunbox/node_modules/@amazon-devices/security-manager-lib",
+    "autolink": {
+      "AmazonSecurityManagerLib": {
+        "libraryName": "libkeplerscript-security-manager-lib-1.so.1",
+        "linkDynamic": true,
+        "turbomodules": [
+          "SecurityManager"
+        ]
+      }
+    },
+    "manifest": {
+      "schema": 1,
+      "fileSets": {
+        "native": [
+          {
+            "arch": "aarch64",
+            "variant": "debug",
+            "directoryPath": "aarch64-debug"
+          },
+          {
+            "arch": "armv7",
+            "variant": "debug",
+            "directoryPath": "armv7-debug"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "debug",
+            "directoryPath": "x86_64-debug"
+          },
+          {
+            "arch": "aarch64",
+            "variant": "release",
+            "directoryPath": "aarch64-release"
+          },
+          {
+            "arch": "armv7",
+            "variant": "release",
+            "directoryPath": "armv7-release"
+          },
+          {
+            "arch": "x86_64",
+            "variant": "release",
+            "directoryPath": "x86_64-release"
+          }
+        ]
+      }
+    }
+  }
+}
