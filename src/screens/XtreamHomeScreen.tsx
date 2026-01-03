@@ -16,6 +16,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { useNavigation } from '@amazon-devices/react-navigation__native';
+import { Screens } from '../components/navigation/types';
 import { COLORS, DIMENSIONS, TABS, TabType } from '../constants/AppConstants';
 import { MediaItem, Playlist } from '../types/XtreamTypes';
 import { getAllPlaylists, searchContent } from '../services/XtreamDataConverter';
@@ -125,13 +126,13 @@ const XtreamHomeScreen: React.FC = () => {
     
     if (item.mediaType === 'series') {
       // Navigate to series details (custom screen)
-      navigation.navigate('XtreamSeriesDetails', { 
+      navigation.navigate(Screens.XTREAM_SERIES_DETAILS, { 
         seriesId: item.seriesId, 
         item: item 
       });
     } else {
       // Navigate to existing DetailsScreen
-      navigation.navigate('DetailsScreen', { 
+      navigation.navigate(Screens.DETAILS_SCREEN, { 
         data: videoData 
       });
     }
@@ -142,7 +143,7 @@ const XtreamHomeScreen: React.FC = () => {
    */
   const handlePlayPress = useCallback((item: MediaItem) => {
     const videoData = convertToVideoSampleFormat(item);
-    navigation.navigate('PlayerScreen', { 
+    navigation.navigate(Screens.PLAYER_SCREEN, { 
       data: videoData 
     });
   }, [navigation]);
