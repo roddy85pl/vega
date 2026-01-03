@@ -8,7 +8,7 @@ import { StyleSheet } from 'react-native';
 import HomeSvg from '../../assets/svgr/HomeSVG';
 import SearchSvg from '../../assets/svgr/SearchSVG';
 import SettingSvg from '../../assets/svgr/SettingSVG';
-import HomeScreen from '../../screens/HomeScreen';
+import XtreamHomeScreen from '../../screens/XtreamHomeScreen';
 import { COLORS } from '../../styles/Colors';
 import { scaleUxToDp } from '../../utils/pixelUtils';
 import SearchWithSuspense from '../SearchWithSuspense';
@@ -34,7 +34,7 @@ const AppDrawer = () => {
         backBehavior="history">
         <Drawer.Screen
           name={Screens.HOME_SCREEN}
-          component={HomeScreen}
+          component={XtreamHomeScreen}
           options={{
             drawerIcon: (props) => (
               <HomeSvg
