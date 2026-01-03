@@ -26,8 +26,20 @@ export default class MiscPolyfill {
     // URL polyfill
     if (typeof global.URL === 'undefined') {
       global.URL = class {
+        href: string;
+        origin: string;
+        pathname: string;
+        search: string;
+        
         constructor(url: string, base?: string) {
           this.href = url;
+          this.origin = '';
+          this.pathname = url;
+          this.search = '';
+        }
+        
+        toString() {
+          return this.href;
         }
         
         static createObjectURL() {

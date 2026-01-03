@@ -29,6 +29,9 @@ export default class W3CMediaPolyfill {
       global.navigator = {
         userAgent: 'VegaOS/1.0',
         platform: 'VegaOS',
+        language: 'en-US',
+        languages: ['en-US', 'en'],
+        onLine: true,
       };
     }
     
