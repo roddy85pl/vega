@@ -14,7 +14,7 @@ Built with React Native and TypeScript, the Vega Video Sample App demonstrates e
 
 - **Dynamic home interface** with rotating hero content and categorized video collections.
 - **Detailed content pages** featuring metadata presentation and interactive controls.
-- **Advanced video playback** using Shaka Player with support for adaptive streaming formats (HLS/DASH/DRM).
+- **Advanced video playback** using Hls.js Player with support for adaptive streaming formats (HLS with MSE mode).
 - **TV-optimized navigation** with focus management and remote control support.
 - **In-App Purchasing integration** for content subscriptions and rentals.
 - **Platform integrations** including Content Launcher, Linear TV, and Content Personalization.
@@ -30,10 +30,8 @@ Build and run the app
 Before you launch the sample app, make sure that you have:
 
 1. [Installed the Vega Developer Tools](https://developer.amazon.com/docs/vega/0.21/install-vega-sdk.html)
-2. **Java Runtime Environment (JRE) or Java Development Kit (JDK)** - Required by Shaka Player's build system for JavaScript compilation and optimization
-3. **Python** - Required by Shaka Player's build scripts
 
-**Note**: The Shaka Player integration runs automatically during `npm install` and requires these dependencies. If you encounter build errors related to Java or Python, install the missing prerequisites and run `npm install` again. For any other prerequisite Shaka issue please visit: https://shaka-project.github.io/shaka-player/docs/api/tutorial-welcome.html.
+**Note**: The Hls.js Player integration runs automatically during `npm install`. The setup extracts the pre-configured Hls.js package and copies the necessary files to your project.
 
 
 

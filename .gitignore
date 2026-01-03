@@ -4,6 +4,8 @@ package-lock.json
 
 # Generated files
 hls-setup/hls-rel
+shaka-setup/shaka-rel
+shaka-setup/shaka-player
 
 # Other files
 *.iml
