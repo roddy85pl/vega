@@ -5,8 +5,8 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rm -rf build bundle kepler-build node_modules package-lock.json generated coverage shaka-setup/shaka-player",
-    "postinstall": "cd shaka-setup && ./build.sh && ./copyOutputs.sh",
+    "clean": "rm -rf build bundle kepler-build node_modules package-lock.json generated coverage hls-setup/hls-rel",
+    "postinstall": "cd hls-setup && ./build.sh",
     "build": "npm-run-all compile lint:fix test",
     "compile": "tsc -p tsconfig.json",
     "test:snapshot": "jest --colors --updateSnapshot",
@@ -122,7 +122,7 @@
     "extends": "@react-native",
     "root": true,
     "ignorePatterns": [
-      "src/w3cmedia/shakaplayer/dist/"
+      "src/hlsjsplayer/dist/"
     ]
   },
   "kepler": {
