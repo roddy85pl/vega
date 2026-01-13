@@ -16,6 +16,9 @@ const SearchResultsScreen = React.lazy(
   () => import('../../screens/SearchResultsScreen'),
 );
 const FeedBackScreen = React.lazy(() => import('../../screens/FeedbackScreen'));
+const XtreamSeriesDetailsScreen = React.lazy(
+  () => import('../../screens/XtreamSeriesDetailsScreen'),
+);
 
 const Stack = createStackNavigator<AppStackParamList>();
 const AppStack = () => {
@@ -51,6 +54,11 @@ const AppStack = () => {
       <Stack.Screen
         name={Screens.FEEDBACK_SCREEN}
         component={WithSuspense(FeedBackScreen)}
+      />
+
+      <Stack.Screen
+        name={Screens.XTREAM_SERIES_DETAILS}
+        component={WithSuspense(XtreamSeriesDetailsScreen)}
       />
     </Stack.Navigator>
   );

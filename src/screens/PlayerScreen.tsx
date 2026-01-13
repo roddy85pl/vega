@@ -234,6 +234,13 @@ const PlayerScreen = ({
 
     if (!videoRef.current || !surfaceHandle.current) {
       console.error('[PlayerScreen] Missing videoRef or surfaceHandle');
+      console.log('[PlayerScreen] videoRef.current:', !!videoRef.current, 'surfaceHandle.current:', !!surfaceHandle.current);
+      
+      // Retry after a short delay if videoRef is not ready yet
+      if (!videoRef.current && surfaceHandle.current) {
+        console.log('[PlayerScreen] VideoRef not ready, retrying in 500ms...');
+        setTimeout(() => loadSourceAndPlay(), 500);
+      }
       return;
     }
 
@@ -410,6 +417,14 @@ const PlayerScreen = ({
     if (videoPlayElapsedTimeM === 0) return;
     reportVideoPlaying();
   }, [reportVideoPlaying, videoPlayElapsedTimeM]);
+
+  // 7. Trigger loadSourceAndPlay when video is initialized and surface is ready
+  useEffect(() => {
+    if (isVideoInitialized && isSurfaceReady.current && surfaceHandle.current && !isSourceLoaded.current) {
+      console.log('[PlayerScreen] Video initialized and surface ready - triggering loadSourceAndPlay');
+      loadSourceAndPlay();
+    }
+  }, [isVideoInitialized, loadSourceAndPlay]);
 
   // === RENDER ===
   return (

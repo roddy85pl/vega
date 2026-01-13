@@ -10,6 +10,7 @@ import { StackNavigationProp } from '@amazon-devices/react-navigation__stack';
 import { StackScreenProps } from '@amazon-devices/react-navigation__stack/lib/typescript/src/types';
 import { ImageSourcePropType, TouchableOpacity } from 'react-native';
 import { TitleData } from '../../types/TitleData';
+import { MediaItem } from '../../types/XtreamTypes';
 
 export enum Screens {
   DEFAULT_SCREEN = 'Home',
@@ -21,6 +22,7 @@ export enum Screens {
   SEARCH_SCREEN = 'Search',
   SEARCH_RESULTS_SCREEN = 'SearchResultsScreen',
   FEEDBACK_SCREEN = 'FeedBackScreen',
+  XTREAM_SERIES_DETAILS = 'XtreamSeriesDetails',
 }
 
 export enum DrawerType {
@@ -48,6 +50,10 @@ export type AppStackParamList = {
     focusId?: number | string;
     onChannelTuneSuccess?: (response: IChangeChannelResponse) => void;
     onChannelTuneFailed?: (error: OperationError) => void;
+  };
+  [Screens.XTREAM_SERIES_DETAILS]: {
+    seriesId: number;
+    item: MediaItem;
   };
 };
 
